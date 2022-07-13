@@ -1,8 +1,11 @@
 package main.pack;
 
 import jdk.nashorn.internal.runtime.logging.Logger;
-import questions.arrays.hashing.medium.LongestConsecutiveSequence;
 import questions.two.pointers.easy.ValidPalindrome;
+import questions.two.pointers.medium.ThreeSum;
+import questions.two.pointers.medium.TwoSumII;
+
+import java.util.Arrays;
 
 import static java.lang.System.*;
 
@@ -35,6 +38,10 @@ public class MainClass {
         }));*/
         //out.println(LongestConsecutiveSequence.longestConsecutive(new int[]{0,3,7,2,3,8,4,6,0,1}));
 
-        out.println(ValidPalindrome.isPalindrome2("A man, a plan, a canal: Panama"));
+        //out.println(ValidPalindrome.isPalindrome2("A man, a plan, a canal: Panama"));
+
+        //out.println(Arrays.toString(TwoSumII.twoSum(new int[]{2, 7, 11, 15}, 9)));
+
+        out.println(ThreeSum.threeSum(new int[]{-1,0,1,2,-1,-4}));
     }
 }
