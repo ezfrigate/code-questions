@@ -3,6 +3,7 @@ package main.pack;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import questions.Newclass;
 import questions.arrays.hashing.medium.IsValidSuDoKu;
+import questions.dfs.MaxAreaOfIsland;
 import questions.dfs.NumberOfIslands;
 import questions.random.MergeSort;
 import questions.random.Random;
