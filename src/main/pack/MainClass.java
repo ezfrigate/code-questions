@@ -3,6 +3,9 @@ package main.pack;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import questions.Newclass;
 import questions.arrays.hashing.medium.IsValidSuDoKu;
+import questions.dfs.NumberOfIslands;
+import questions.random.MergeSort;
+import questions.random.Random;
 import questions.sliding.window.medium.LongestSubString;
 import questions.stack.GenerateParentheses;
 import questions.stack.MinStack;
@@ -35,17 +38,17 @@ public class MainClass {
 
         //out.println(Arrays.toString(ProductOfArrayExceptSelf.productExceptSelf(new int[]{1, 4, 9, 13, 0})));
 
-        out.println(IsValidSuDoKu.isValidSudoku(new char[][]{
-                {'5','3','.','.','7','.','.','.','.'}
-                ,{'6','.','.','1','9','5','.','.','.'}
-                ,{'.','9','8','.','.','.','.','6','.'}
-                ,{'8','.','.','.','6','.','.','.','3'}
-                ,{'4','.','.','8','.','3','.','.','1'}
-                ,{'7','.','.','.','2','.','.','.','6'}
-                ,{'.','6','.','.','.','.','2','8','.'}
-                ,{'.','.','.','4','1','9','.','.','5'}
-                ,{'.','.','.','.','8','.','.','7','9'}
-        }));
+//        out.println(IsValidSuDoKu.isValidSudoku(new char[][]{
+//                {'5','3','.','.','7','.','.','.','.'}
+//                ,{'6','.','.','1','9','5','.','.','.'}
+//                ,{'.','9','8','.','.','.','.','6','.'}
+//                ,{'8','.','.','.','6','.','.','.','3'}
+//                ,{'4','.','.','8','.','3','.','.','1'}
+//                ,{'7','.','.','.','2','.','.','.','6'}
+//                ,{'.','6','.','.','.','.','2','8','.'}
+//                ,{'.','.','.','4','1','9','.','.','5'}
+//                ,{'.','.','.','.','8','.','.','7','9'}
+//        }));
         //out.println(LongestConsecutiveSequence.longestConsecutive(new int[]{0,3,7,2,3,8,4,6,0,1}));
 
         //out.println(ValidPalindrome.isPalindrome2("A man, a plan, a canal: Panama"));
@@ -90,5 +93,27 @@ public class MainClass {
         //out.println(GenerateParentheses.generateParenthesis(8));
 
         //out.println(Newclass.getBestIndex(new int[]{-3, 2, 3, -4, 3, 1}));
+
+//        out.println(Random.search(new int[]{4,5,6,7,8,0,1,2}, 0));
+//        out.println(Random.search(new int[]{4,5,6,7,8,0,1,2}, 8));
+//        out.println(Random.search(new int[]{4,5,6,7,0,1,2}, 0));
+//        out.println(Random.search(new int[]{4,5,6,7,0,1,2}, 7));
+//        out.println(Random.search(new int[]{1,3}, 0));
+//        out.println(Random.search(new int[]{3,1}, 0));
+//        out.println(Random.search(new int[]{3,4,5,1,2}, 4));
+//        out.println(Random.search(new int[]{1,2,3,4,0}, 4));
+//        int[] A = new int[]{3, 4, 6, 7, 5, 2};
+//        MergeSort.sort(0, A.length-1, A);
+//        out.println(Arrays.toString(A));
+
+        char[][] grid = new char[][]{
+                {'1','1','1','1','0'},
+                {'1','1','1','1','0'},
+                {'1','1','0','0','0'},
+                {'1','1','1','0','0'}
+        };
+
+        out.println(NumberOfIslands.numIslands(grid));
+        out.println(MaxAreaOfIsland.maxAreaOfIsland(grid));
     }
 }
