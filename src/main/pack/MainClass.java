@@ -1,27 +1,12 @@
 package main.pack;
 
 import jdk.nashorn.internal.runtime.logging.Logger;
-import questions.Newclass;
-import questions.arrays.hashing.medium.IsValidSuDoKu;
 import questions.dfs.MaxAreaOfIsland;
 import questions.dfs.NumberOfIslands;
-import questions.random.MergeSort;
-import questions.random.Random;
-import questions.sliding.window.medium.LongestSubString;
-import questions.stack.GenerateParentheses;
-import questions.stack.MinStack;
-import questions.stack.RPN;
-import questions.stack.ValidParentheses;
-import questions.two.pointers.easy.ValidPalindrome;
-import questions.two.pointers.hard.TrappedWater;
-import questions.two.pointers.medium.ContainerMaxArea;
-import questions.two.pointers.medium.ThreeSum;
-import questions.two.pointers.medium.TwoSumII;
+import questions.linked.list.ListNode;
+import questions.linked.list.Merge2Lists;
 
-import java.util.Arrays;
-import java.util.function.Consumer;
-
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 @Logger
 public class MainClass {
@@ -107,14 +92,25 @@ public class MainClass {
 //        MergeSort.sort(0, A.length-1, A);
 //        out.println(Arrays.toString(A));
 
-        char[][] grid = new char[][]{
-                {'1','1','1','1','0'},
-                {'1','1','1','1','0'},
-                {'1','1','0','0','0'},
-                {'1','1','1','0','0'}
-        };
+//        char[][] grid = new char[][]{
+//                {'1','1','1','1','0'},
+//                {'1','1','1','1','0'},
+//                {'1','1','0','0','0'},
+//                {'1','1','1','0','0'}
+//        };
+//
+//        out.println(NumberOfIslands.numIslands(grid));
+//        out.println(MaxAreaOfIsland.maxAreaOfIsland(grid));
 
-        out.println(NumberOfIslands.numIslands(grid));
-        out.println(MaxAreaOfIsland.maxAreaOfIsland(grid));
+        ListNode l = new ListNode(1);
+        l.next = new ListNode(2);
+        l.next.next = new ListNode(3);
+
+        ListNode r = new ListNode(1);
+        r.next = new ListNode(3);
+        r.next.next = new ListNode(5);
+
+        System.out.println(Merge2Lists.mergeTwoLists(l,r));
+
     }
 }
