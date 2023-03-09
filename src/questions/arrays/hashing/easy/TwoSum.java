@@ -1,7 +1,9 @@
 package questions.arrays.hashing.easy;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <div>
@@ -51,5 +53,17 @@ public class TwoSum {
             }
         }
         return new int[0];
+    }
+
+    public static int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> numsMap = new HashMap<>();
+        for(int i=0; i< nums.length; i++){
+            if(numsMap.keySet().contains(target-nums[i])){
+                return new int[]{numsMap.get(target-nums[i]),i};
+            }else{
+                numsMap.put(nums[i], i);
+            }
+        }
+        return null;
     }
 }

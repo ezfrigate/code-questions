@@ -67,4 +67,37 @@ public class ProductOfArrayExceptSelf {
         }
         return answer;
     }
+
+    public int[] productExceptSelf2(int[] nums) {
+        int n = nums.length;
+        int[] prefix = new int[nums.length];
+        int[] postfix = new int[nums.length];
+        int prepointer = 1;
+        int postpointer = 1;
+        for(int i = 0; i<nums.length; i++){
+            prefix[i]=prepointer;
+            postfix[n-1-i]=postpointer;
+            prepointer=prepointer*nums[i];
+            postpointer=postpointer*nums[n-1-i];
+        }
+        for(int i = 0; i<nums.length; i++){
+            nums[i]=prefix[i]*postfix[i];
+        }
+        return nums;
+    }
+
+    public int[] productExceptSelf3(int[] nums) {
+        int pointer = 1;
+        int[] answer = new int[nums.length];
+        for(int i = 0; i<nums.length; i++){
+            answer[i]=pointer;
+            pointer=pointer*nums[i];
+        }
+        pointer = 1;
+        for(int i = 0; i<nums.length; i++){
+            answer[nums.length-1-i]=answer[nums.length-i-1]*pointer;
+            pointer=pointer*nums[nums.length-i-1];
+        }
+        return answer;
+    }
 }

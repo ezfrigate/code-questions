@@ -49,4 +49,12 @@ public class ContainsDuplicate {
         }
         return false;
     }
+
+    public static boolean containsDuplicate2(int[] nums) {
+        Set<Integer> hashSet = new HashSet<>();
+        for (int num : nums) {
+            if (!hashSet.add(num)) return false;
+        }
+        return true;
+    }
 }
