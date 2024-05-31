@@ -1,5 +1,7 @@
 package questions.stack;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -27,6 +29,6 @@ import java.util.Stack;
  */
 public class DailyTemp {
     public int[] dailyTemperatures(int[] temperatures) {
-        return temperatures;
+        return null;
     }
 }

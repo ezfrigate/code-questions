@@ -1,7 +1,7 @@
 package main.pack;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
 import questions.Newclass;
+import questions.arrays.hashing.easy.TwoSum;
 import questions.arrays.hashing.medium.IsValidSuDoKu;
 import questions.backtrack.NQueens;
 import questions.backtrack.Permutations;
@@ -9,22 +9,25 @@ import questions.backtrack.Subsets;
 
 import questions.dfs.MaxAreaOfIsland;
 import questions.dfs.NumberOfIslands;
+import questions.graphs.RottingOranges;
+import questions.linked.list.LRUCache;
 import questions.linked.list.ListNode;
 import questions.linked.list.Merge2Lists;
 import questions.linked.list.ReorderList;
 import questions.random.NegativeBin;
 
+import java.util.Arrays;
+
 import static java.lang.System.out;
 
-@Logger
+
 public class MainClass {
     public static void main(String[] args){
 
         //out.println(ContainsDuplicate.containsDuplicate(new int[]{1,2,3,4,5,6,7,7}));
 
         //out.println(IsAnagram.isAnagram("anagram", "naaramg"));
-
-        //out.println(Arrays.toString(TwoSum.twoSum(new int[]{2, 7, 11, 9}, 9)));
+        out.println(Arrays.toString(TwoSum.twoSum3(new int[]{3,2,4}, 6)));
 
         //out.println(GroupAnagrams.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
 
@@ -138,10 +141,27 @@ public class MainClass {
 //        ReorderList.reorderList(l);
 //        l.printList();
 //
-        int[] array = NegativeBin.convertDecimalToBin(-40);
-        for(int i=0; i<10; i++) {
-            System.out.print(array[i]);
-        }
-        System.out.println(NegativeBin.convertBinToDecimal("0001111100"));
+//        int[] array = NegativeBin.convertDecimalToBin(-40);
+//        for(int i=0; i<10; i++) {
+//            System.out.print(array[i]);
+//        }
+//        System.out.println(NegativeBin.convertBinToDecimal("0001111100"));
+
+        //new RottingOranges().orangesRotting(new int[][]{{2,1,1},{1,1,0},{0,1,1}});
+//        new RottingOranges().orangesRotting(new int[][]{{1},{2}});
+//        LRUCache lRUCache = new LRUCache(2);
+//        lRUCache.put(1, 1); // cache is {1=1}
+//        lRUCache.put(2, 2); // cache is {1=1, 2=2}
+//        lRUCache.get(1);    // return 1
+//        lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+//        lRUCache.get(2);    // returns -1 (not found)
+//        lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+//        lRUCache.get(1);    // return -1 (not found)
+//        lRUCache.get(3);    // return 3
+//        lRUCache.get(4);    // return 4
+//        byte[] b = "lo".getBytes();
+//        for(int i = 0; i<b.length;i++){
+//            out.println(b[i]);
+//        }
     }
 }

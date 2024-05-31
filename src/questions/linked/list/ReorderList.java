@@ -2,7 +2,6 @@ package questions.linked.list;
 
 import questions.random.MergeSort;
 
-import javax.xml.bind.Unmarshaller;
 
 /**
  * <div class="px-5 pt-4"><div class="_1l1MA"><p>You are given the head of a singly linked-list. The list can be represented as:</p>

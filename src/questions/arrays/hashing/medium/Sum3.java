@@ -1,8 +1,7 @@
 package questions.arrays.hashing.medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Sum3 {
     public List<List<Integer>> threeSum(int[] nums) {
@@ -84,5 +83,58 @@ public class Sum3 {
             j++;
             k++;
         }
+    }
+
+    public List<List<Integer>> threeSum2(int[] nums) {
+        Arrays.sort(nums);
+        Set<List<Integer>> ans = new HashSet<>();
+        for(int i = 0; i< nums.length-2; i++){
+            int p1= i+1;
+            int p2= nums.length-1;
+            while(p1<p2 && nums[i] <=0) {
+                int sum = nums[i] + nums[p1] + nums[p2];
+                if (sum == 0) ans.add(Arrays.asList(nums[i], nums[p1], nums[p2]));
+                if (sum > 0) p2--;
+                else p1++;
+            }
+        }
+        return new ArrayList<>(ans);
+    }
+
+    public List<List<Integer>> threeSum3(int[] nums) {
+        Arrays.sort(nums);
+
+        List<List<Integer>> sol = new ArrayList<>();
+
+        int i = 0;
+        int prev = 0;
+        while (i < nums.length - 2 && nums[i] <= 0) {
+            if (prev == nums[i] && i > 0) {
+                i++;
+                continue;
+            }
+            int p1 = i+1;
+            int p2 = nums.length - 1;
+            prev = nums[i];
+            while (p1 < p2) {
+                int sum = nums[i] + nums[p1] + nums[p2];
+                if (sum == 0) {
+                    List<Integer> triplet = new ArrayList<>();
+                    triplet.add(nums[i]);
+                    triplet.add(nums[p1]);
+                    triplet.add(nums[p2]);
+                    sol.add(triplet);
+                    p2--;
+                    int current = nums[p1];
+                    p1++;
+                    while (p1 < p2 && current == nums[p1])
+                        p1++;
+                }
+                else if (sum > 0) p2--;
+                else p1++;
+            }
+            i++;
+        }
+        return sol;
     }
 }

@@ -1,5 +1,7 @@
 package questions.arrays.hashing.easy;
 
+import questions.Util;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,6 +65,18 @@ public class TwoSum {
             }else{
                 numsMap.put(nums[i], i);
             }
+        }
+        return null;
+    }
+
+    public static int[] twoSum3(int[] nums, int target) {
+        Util.sort(0, nums.length-1, nums);
+        int n = Util.nearestSearch(target, nums);
+        int i = 0;
+        while(i<n){
+            if(nums[i]+nums[n] == target) return new int[]{nums[i], nums[n]};
+            if(nums[i]+nums[n] > target) n--;
+            else i++;
         }
         return null;
     }
